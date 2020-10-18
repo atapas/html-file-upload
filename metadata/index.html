@@ -10,7 +10,7 @@
     <div>
         <h1>Read File Metadata</h1>
         <input type="file" id="file-uploader">
-        <p>Upload a file and see the output in browser console</p>
+        <p id="feedback"></p>
     </div>
 </body>
 
@@ -27,6 +27,14 @@
             const size = file.size;
             const lastModified = file.lastModified;
             console.log({ file, name, type, size, lastModified });
+
+            const feedback = document.getElementById('feedback');
+            const msg = ` File Name: ${name} <br/>
+                    File Size: ${size} <br/>
+                    File type: ${type} <br/>
+                    File Last Modified: ${new Date(lastModified)}`;
+              
+            feedback.innerHTML = msg;
         }
     });
 

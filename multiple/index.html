@@ -12,6 +12,8 @@
         <h1>Upload multiple files</h1>
         <input type="file" id="file-uploader" multiple />
         <p>Upload multiple files and see the output in browser console</p>
+
+        <p id="feedback"></p>
     </div>
 
     <script>
@@ -20,6 +22,11 @@
         fileUploader.addEventListener('change', (event) => {
             const files = event.target.files;
             console.log('files', files);
+
+            // show the upload feedback
+            const feedback = document.getElementById('feedback');
+            const msg = `${files.length} file(s) uploaded successfully!`;
+            feedback.innerHTML = msg;
         });
     </script>
 </body>
