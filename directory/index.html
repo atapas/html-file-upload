@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Upload directories</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='../index.css'>
+</head>
+
+<body>
+    <div>
+        <h1>Upload directories</h1>
+        <input type="file" id="file-uploader" webkitdirectory />
+
+        <ul id="pathList"></ul>
+
+    </div>
+</body>
+
+<script>
+    const fileUploader = document.getElementById('file-uploader');
+    const pathList = document.getElementById('pathList');
+
+    function removeAllChildNodes(parent) {
+        while (parent.firstChild) {
+            parent.removeChild(parent.firstChild);
+        }
+    }
+
+    fileUploader.addEventListener('change', (event) => {
+        const files = event.target.files;
+        console.log('files', files);
+
+        removeAllChildNodes(pathList);
+
+        [...files].forEach((file, index) => {
+            let path = document.createElement('li');
+            path.innerHTML = file.webkitRelativePath;
+            pathList.appendChild(path);
+        });
+    });
+
+
+</script>
+
+</html>

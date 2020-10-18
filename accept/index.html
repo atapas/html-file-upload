@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>File accept property</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='../index.css'>
+
+</head>
+
+<body>
+    <div>
+        <h1>Can select only .png and .jpg files</h1>
+        <input type="file" id="file-uploader" accept=".jpg, .png" multiple>
+        <p>Upload files and see the output in browser console</p>
+    </div>
+</body>
+
+<script>
+    const fileUploader = document.getElementById('file-uploader');
+
+    fileUploader.addEventListener('change', (event) => {
+        const files = event.target.files;
+        console.log('files', files);
+    });
+</script>
+
+</html>

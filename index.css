@@ -1,0 +1,52 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: #000000;
+  color: #ffffff;
+}
+
+a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+}
+
+div#main UL LI {
+  padding: 10px;
+  font-size: 20px;
+}
+
+div#feedback {
+  padding: 15px;
+}
+
+div#container {
+  margin: 15px;
+}
+
+div#drop-zone {
+  height: 400px;
+  width: 400px;
+  border: 2px dotted #ebebeb;
+}
+
+div#drop-zone:hover {
+  background-color: gray;
+  border: 1px dotted #000000;
+  cursor: move;
+}
+
+div#content {
+  border: 1px solid #FFF;
+  margin-top: 15px;
+  padding: 10px;
+}

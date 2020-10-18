@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Multiple File Upload</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='../index.css'>
+
+</head>
+
+<body>
+
+    <div>
+        <h1>Upload multiple files</h1>
+        <input type="file" id="file-uploader" multiple />
+        <p>Upload multiple files and see the output in browser console</p>
+    </div>
+
+    <script>
+        const fileUploader = document.getElementById('file-uploader');
+
+        fileUploader.addEventListener('change', (event) => {
+            const files = event.target.files;
+            console.log('files', files);
+        });
+    </script>
+</body>
+
+</html>

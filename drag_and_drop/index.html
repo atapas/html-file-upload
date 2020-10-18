@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Upload file with Drag & Drop</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='../index.css'>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Drag & Drop an Image</h1>
+        <div id="drop-zone">
+            DROP HERE
+        </div>
+
+        <div id="content">
+            Your image to appear here..
+        </div>
+
+    </div>
+</body>
+
+<script>
+    const dropZone = document.getElementById('drop-zone');
+    const content = document.getElementById('content');
+
+    const reader = new FileReader();
+
+    if (window.FileList && window.File) {
+        dropZone.addEventListener('dragover', event => {
+            event.stopPropagation();
+            event.preventDefault();
+            event.dataTransfer.dropEffect = 'copy';
+        });
+
+        dropZone.addEventListener('drop', event => {
+            content.innerHTML = '';
+            event.stopPropagation();
+            event.preventDefault();
+            const files = event.dataTransfer.files;
+            console.log(files);
+
+            reader.readAsDataURL(files[0]);
+
+            reader.addEventListener('load', (event) => {
+                content.innerHTML = '';
+                const img = document.createElement('img');
+                img.style.height = '400px';
+                img.style.width = '400px';
+                content.appendChild(img);
+                img.src = event.target.result;
+                img.alt = file.name;
+
+            });
+        });
+    }
+</script>
+
+</html>
