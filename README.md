@@ -11,3 +11,7 @@ Build Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/a961ed54-
 # Many Thanks to all the `Stargazers` who has supported this project with stars(⭐)
 
 [![Stargazers repo roster for @atapas/html-file-upload](https://reporoster.com/stars/atapas/html-file-upload)](https://github.com/atapas/html-file-upload/stargazers)
+
+# Know How?
+
+[0 useful HTML file upload tips for web developers](https://blog.greenroots.info/10-useful-html-file-upload-tips-for-web-developers-ckgetegpf0c7go9s123wvg7bi)
