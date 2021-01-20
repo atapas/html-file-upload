@@ -14,4 +14,4 @@ Build Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/a961ed54-
 
 # Know How?
 
-[0 useful HTML file upload tips for web developers](https://blog.greenroots.info/10-useful-html-file-upload-tips-for-web-developers-ckgetegpf0c7go9s123wvg7bi)
+[10 useful HTML file upload tips for web developers](https://blog.greenroots.info/10-useful-html-file-upload-tips-for-web-developers-ckgetegpf0c7go9s123wvg7bi)
