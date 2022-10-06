@@ -1,34 +1,52 @@
 <html>
-
-<head>
+  <head>
     <title>Multiple File Upload</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='../index.css'>
+    <link rel="stylesheet" type="text/css" media="screen" href="../index.css" />
+    <style>
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .main-box {
+        width: 50%;
+        background-color: #07deff;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
 
-</head>
-
-<body>
-
-    <div>
+  <body>
+    <div class="container">
+      <div class="main-box">
         <h1>Upload multiple files</h1>
         <input type="file" id="file-uploader" multiple />
         <p>Upload multiple files and see the output in browser console</p>
 
         <p id="feedback"></p>
+      </div>
     </div>
 
     <script>
-        const fileUploader = document.getElementById('file-uploader');
+      const fileUploader = document.getElementById('file-uploader');
 
-        fileUploader.addEventListener('change', (event) => {
-            const files = event.target.files;
-            console.log('files', files);
+      fileUploader.addEventListener('change', (event) => {
+        const files = event.target.files;
+        console.log('files', files);
 
-            // show the upload feedback
-            const feedback = document.getElementById('feedback');
-            const msg = `${files.length} file(s) uploaded successfully!`;
-            feedback.innerHTML = msg;
-        });
+        // show the upload feedback
+        const feedback = document.getElementById('feedback');
+        const msg = `${files.length} file(s) uploaded successfully!`;
+        feedback.innerHTML = msg;
+      });
     </script>
-</body>
-
+  </body>
 </html>
