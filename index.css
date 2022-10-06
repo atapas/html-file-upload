@@ -20,6 +20,22 @@ div {
   font-family: "Roboto Mono", monospace;
 }
 
+#main_content {
+  margin: 10%;
+  min-height: 400px; 
+  height: auto;
+  background-color: #70b3dc;
+  position: relative;
+}
+
+#container {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+
 div#main UL LI {
   padding: 10px;
   font-size: 20px;
