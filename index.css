@@ -50,3 +50,17 @@ div#content {
   margin-top: 15px;
   padding: 10px;
 }
+
+.main-icon img{
+  float: left;
+  width: 33px;
+  height: 33px;
+  background: #555;
+  padding: 0px; 
+  margin-right: 6px;
+}
+.main-icon h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
