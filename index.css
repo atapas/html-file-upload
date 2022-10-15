@@ -130,3 +130,15 @@ div#content {
   opacity: 1;
   margin-left: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .back-link {
+    top: auto;
+    bottom: 10px;
+    right: 0;
+    left: auto;
+  }
+  .back-link .text {
+    display: none;
+  }
+}
