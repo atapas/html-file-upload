@@ -51,6 +51,18 @@ div#content {
   padding: 10px;
 }
 
+.content {
+    margin: 10% auto 0 auto;
+}
+
+footer {
+    margin-top: 20%;
+}
+
+.content li a:hover {
+    margin-left: 10px;
+}
+
 .main-icon img{
   float: left;
   width: 33px;
