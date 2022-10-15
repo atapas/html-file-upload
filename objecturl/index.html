@@ -3,7 +3,7 @@
 <head>
     <title>Use Object URL</title>
     <link rel='stylesheet' type='text/css' media='screen' href='../index.css'>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -11,6 +11,11 @@
         <h1>Use Object URL</h1>
         <input type="file" id="file-uploader" accept=".jpg, .jpeg, .png">
         <div id="image-grid"></div>
+
+        <a href="/" class="back-link">
+            <span class="arrow">&lt;</span>
+            <span class="text">more file upload tips</span>
+        </a>
     </div>
 </body>
 
@@ -22,12 +27,12 @@
     fileUploader.addEventListener('change', (event) => {
         const files = event.target.files;
         const file = files[0];
-    
+
         const img = document.createElement('img');
-            imageGrid.appendChild(img);
-            img.src = URL.createObjectURL(file);
-            img.alt = file.name;
-        });
+        imageGrid.appendChild(img);
+        img.src = URL.createObjectURL(file);
+        img.alt = file.name;
+    });
 </script>
 
 </html>

@@ -1,15 +1,36 @@
+:root {
+  --primary-color: #2f8da7;
+  --font-color: #000;
+  --bg-color: #fff;
+  --drag-hover-bg: #eee;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #61dafb;
+    --font-color: #ffffff;
+    --bg-color: #000000;
+    --drag-hover-bg: gray;
+  }
+}
+
 html {
   height: 100%;
 }
 
 body {
-  background: #000000;
-  color: #ffffff;
+  background-color: var(--bg-color);
+  color: var(--font-color);
 }
 
 a {
-  color: #61dafb;
+  color: var(--primary-color);
   text-decoration: none;
+}
+
+a:hover {
+  filter: brightness(1.5);
+  text-decoration: underline;
 }
 
 div {
@@ -17,7 +38,7 @@ div {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 
 div#main UL LI {
@@ -36,31 +57,65 @@ div#container {
 div#drop-zone {
   height: 400px;
   width: 400px;
+  max-width: 100%;
   border: 2px dotted #ebebeb;
 }
 
 div#drop-zone:hover {
-  background-color: gray;
-  border: 1px dotted #000000;
+  background-color: var(--drag-hover-bg);
+  border: 2px dotted var(--bg-color);
   cursor: move;
 }
 
 div#content {
-  border: 1px solid #FFF;
+  border: 1px solid var(--font-color);
   margin-top: 15px;
   padding: 10px;
 }
 
-.main-icon img{
+.main-icon img {
   float: left;
   width: 33px;
   height: 33px;
   background: #555;
-  padding: 0px; 
+  padding: 0px;
   margin-right: 6px;
 }
+
 .main-icon h1 {
   position: relative;
   top: 18px;
   left: 10px;
+}
+
+/* Back button on each page */
+
+.back-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  margin: 15px;
+}
+
+.back-link .arrow {
+  font-size: 200%;
+  margin: 0 10px 0 0;
+}
+
+.back-link .text {
+  opacity: 0;
+  margin-left: 0;
+  transition: all 0.1s linear;
+  display: inline-block;
+}
+
+.back-link:hover {
+  text-decoration: none;
+}
+
+.back-link:hover .text {
+  opacity: 1;
+  margin-left: 10px;
 }
