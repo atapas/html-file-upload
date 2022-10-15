@@ -3,7 +3,7 @@
 <head>
     <title>Know about File metadata</title>
     <link rel='stylesheet' type='text/css' media='screen' href='../index.css'>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -11,6 +11,11 @@
         <h1>Read File Metadata</h1>
         <input type="file" id="file-uploader">
         <p id="feedback"></p>
+
+        <a href="/" class="back-link">
+            <span class="arrow">&lt;</span>
+            <span class="text">more file upload tips</span>
+        </a>
     </div>
 </body>
 
@@ -33,7 +38,7 @@
                     File Size: ${size} <br/>
                     File type: ${type} <br/>
                     File Last Modified: ${new Date(lastModified)}`;
-              
+
             feedback.innerHTML = msg;
         }
     });
