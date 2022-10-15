@@ -1,16 +1,20 @@
 :root {
   --primary-color: #2f8da7;
-  --font-color: #000;
-  --bg-color: #fff;
+  --primary-color-hover: #6cb8cd;
+  --font-color: #fff;
+  --bg-color: #000;
   --drag-hover-bg: #eee;
+  --logo-src: url('./assets/download.png');
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --primary-color: #61dafb;
-    --font-color: #ffffff;
-    --bg-color: #000000;
+    --primary-color-hover: #44a5bf;
+    --font-color: #000;
+    --bg-color: #fff;
     --drag-hover-bg: gray;
+    --logo-src: url('./assets/download-light.png');
   }
 }
 
@@ -29,7 +33,7 @@ a {
 }
 
 a:hover {
-  filter: brightness(1.5);
+  color: var(--primary-color-hover);
   text-decoration: underline;
 }
 
@@ -73,13 +77,20 @@ div#content {
   padding: 10px;
 }
 
-.main-icon img {
+.main-icon h1:before {
+  content: '';
+  display: block;
   float: left;
   width: 33px;
   height: 33px;
-  background: #555;
   padding: 0px;
   margin-right: 6px;
+  background-image: var(--logo-src);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+  top: 2px;
 }
 
 .main-icon h1 {
