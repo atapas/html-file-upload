@@ -12,6 +12,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: white;
+}
+
 div {
   display: flex;
   justify-content: center;
